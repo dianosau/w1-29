@@ -103,10 +103,16 @@ class MyHomePage extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("เบอร์โทรศัพท์"),
+                            Text(
+                              "เบอร์โทรศัพท์",
+                              style: TextStyle(fontSize: 15),
+                            ),
                             Text(
                               "090-730-0691",
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ],
                         ),
@@ -123,16 +129,19 @@ class MyHomePage extends StatelessWidget {
                             color: Colors.blue[700],
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          child: Icon(Icons.phone, color: Colors.white),
+                          child: Icon(Icons.cake, color: Colors.white),
                         ),
                         SizedBox(width: 15),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("เบอร์โทรศัพท์"),
+                            Text("วันเกิด", style: TextStyle(fontSize: 15)),
                             Text(
-                              "090-730-0691",
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              "10 สิงหาคม 2548",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ],
                         ),
@@ -149,22 +158,26 @@ class MyHomePage extends StatelessWidget {
                             color: Colors.blue[700],
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          child: Icon(Icons.phone, color: Colors.white),
+                          child: Icon(Icons.location_on, color: Colors.white),
                         ),
                         SizedBox(width: 15),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("เบอร์โทรศัพท์"),
+                            Text("ที่อยู่", style: TextStyle(fontSize: 15)),
                             Text(
-                              "090-730-0691",
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              "เกาะแคนดี้",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ],
                         ),
                       ],
                     ),
                   ),
+
                   Container(
                     padding: EdgeInsets.only(top: 15, left: 15, right: 15),
                     child: Row(
@@ -175,22 +188,26 @@ class MyHomePage extends StatelessWidget {
                             color: Colors.blue[700],
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          child: Icon(Icons.phone, color: Colors.white),
+                          child: Icon(Icons.school, color: Colors.white),
                         ),
                         SizedBox(width: 15),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("เบอร์โทรศัพท์"),
+                            Text("การศึกษา", style: TextStyle(fontSize: 15)),
                             Text(
-                              "090-730-0691",
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              "วิทยาลัยเทคโนโลยีภาคตะวันออกอีเทค",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ],
                         ),
                       ],
                     ),
                   ),
+
                   Container(
                     padding: EdgeInsets.only(top: 15),
                     child: SizedBox(
@@ -224,7 +241,29 @@ class SecondPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text("Second Page")));
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: [
+            Container(
+              padding: EdgeInsets.all(15),
+              width: double.infinity,
+              child: Row(
+                children: [
+                  ClipOval(
+                    child: Image.network(
+                      "https://s2.coinmarketcap.com/static/img/coins/200x200/35335.png",
+                      width: 100,
+                      height: 100,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
     throw UnimplementedError();
   }
 }
