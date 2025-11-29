@@ -249,6 +249,7 @@ class SecondPage extends StatelessWidget {
               padding: EdgeInsets.all(15),
               width: double.infinity,
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ClipOval(
                     child: Image.network(
@@ -257,6 +258,152 @@ class SecondPage extends StatelessWidget {
                       height: 100,
                     ),
                   ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    child: Column(
+                      children: [
+                        Column(
+                          children: [
+                            Text(
+                              "0",
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              "การติดตาม",
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  DecoratedBox(
+                    decoration: BoxDecoration(color: Colors.grey[300]),
+                    child: SizedBox(width: 1, height: 20),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    child: Column(
+                      children: [
+                        Column(
+                          children: [
+                            Text(
+                              "300M",
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              "ผู้ติดตาม",
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  DecoratedBox(
+                    decoration: BoxDecoration(color: Colors.grey[300]),
+                    child: SizedBox(width: 1, height: 20),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    child: Column(
+                      children: [
+                        Column(
+                          children: [
+                            Text(
+                              "0",
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              "ถูกใจและบันทึก",
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(25),
+              width: double.infinity,
+
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        "Manatsawi_Ruangsoouksood",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
+                      ),
+                      SizedBox(width: 10),
+                      Icon(Icons.verified, color: Colors.blue),
+                    ],
+                  ),SizedBox(height: 12),
+                  Row(
+                    children: [
+                      Icon(Icons.tiktok, color: Colors.grey, size: 14),
+                      SizedBox(width: 2),
+                      Text(
+                        "manatsawi666",
+                        style: TextStyle(color: Colors.grey, fontSize: 14),
+                      ),
+                      SizedBox(width: 2),
+                      Icon(Icons.arrow_drop_down, color: Colors.grey, size: 14),
+                    ],
+                  ),SizedBox(height: 12),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ElevatedButton(
+                        onPressed: () =>
+                            Navigator.pushNamed(context, '/second'),
+
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.yellow,
+                          foregroundColor: Colors.black,
+                          padding: EdgeInsets.symmetric(vertical: 10),
+                          minimumSize: Size(300, 25),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(
+                              12,
+                            ),
+                          ),
+                        ),
+
+                        child: Text(
+                          "ติดตาม",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
+
+                      Icon(Icons.share),
+                    ],
+                  ),
                 ],
               ),
             ),
@@ -264,6 +411,5 @@ class SecondPage extends StatelessWidget {
         ),
       ),
     );
-    throw UnimplementedError();
   }
 }
