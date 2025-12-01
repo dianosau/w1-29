@@ -345,7 +345,7 @@ class SecondPage extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.all(25),
+              padding: EdgeInsets.all(20),
               width: double.infinity,
 
               child: Column(
@@ -363,7 +363,8 @@ class SecondPage extends StatelessWidget {
                       SizedBox(width: 10),
                       Icon(Icons.verified, color: Colors.blue),
                     ],
-                  ),SizedBox(height: 12),
+                  ),
+                  SizedBox(height: 12),
                   Row(
                     children: [
                       Icon(Icons.tiktok, color: Colors.grey, size: 14),
@@ -375,7 +376,8 @@ class SecondPage extends StatelessWidget {
                       SizedBox(width: 2),
                       Icon(Icons.arrow_drop_down, color: Colors.grey, size: 14),
                     ],
-                  ),SizedBox(height: 12),
+                  ),
+                  SizedBox(height: 12),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -389,9 +391,7 @@ class SecondPage extends StatelessWidget {
                           padding: EdgeInsets.symmetric(vertical: 10),
                           minimumSize: Size(300, 25),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(
-                              12,
-                            ),
+                            borderRadius: BorderRadius.circular(12),
                           ),
                         ),
 
@@ -403,6 +403,32 @@ class SecondPage extends StatelessWidget {
 
                       Icon(Icons.share),
                     ],
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: AspectRatio(
+                      aspectRatio: 1,
+                      child: Image.network(
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3Ej5BzvOO-O9gwELF7XU9ZfIjWZsaN1Ka5Q&s",
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  Expanded(
+                    child: AspectRatio(
+                      aspectRatio: 1,
+                      child: Image.network(
+                        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Launch_of_Falcon_9_carrying_ORBCOMM_OG2-M1_%2816601442698%29.jpg/250px-Launch_of_Falcon_9_carrying_ORBCOMM_OG2-M1_%2816601442698%29.jpg",
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
                 ],
               ),
